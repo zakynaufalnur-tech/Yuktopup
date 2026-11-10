@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C TOP Y - Premium Game Store</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">C TOP <span>Y.</span></div>
+  <div class="online">● SYSTEM ONLINE</div>
+</header>
+
+<main id="shopPage">
+<div class="container">
+
+<section class="hero">
+  <span class="tag">⚡ PREMIUM GAME STORE</span>
+  <h1>TOP UP YOUR<br>FAVORITE GAME!</h1>
+  <p>Isi diamond dan item game favoritmu di C TOP Y.</p>
+</section>
+
+<section class="section">
+<h2>🎮 Pilih Game</h2>
+<div class="games">
+
+<div class="game active" onclick="selectGame(this,'Mobile Legends')">
+<img src="https://placehold.co/400x200/30206d/ffffff?text=MOBILE+LEGENDS">
+<div><h3>Mobile Legends</h3><small>Diamond</small></div>
+</div>
+
+<div class="game" onclick="selectGame(this,'Free Fire')">
+<img src="https://placehold.co/400x200/762c25/ffffff?text=FREE+FIRE">
+<div><h3>Free Fire</h3><small>Diamond</small></div>
+</div>
+
+<div class="game" onclick="selectGame(this,'PUBG Mobile')">
+<img src="https://placehold.co/400x200/5c4927/ffffff?text=PUBG+MOBILE">
+<div><h3>PUBG Mobile</h3><small>UC</small></div>
+</div>
+
+<div class="game" onclick="selectGame(this,'Genshin Impact')">
+<img src="https://placehold.co/400x200/285f72/ffffff?text=GENSHIN">
+<div><h3>Genshin Impact</h3><small>Genesis Crystal</small></div>
+</div>
+
+</div>
+</section>
+
+<section class="panel">
+<h3>👤 Masukkan Data Akun</h3>
+<input id="userId" placeholder="Masukkan User ID">
+<input id="serverId" placeholder="Server ID / Zone ID (jika ada)">
+</section>
+
+<section class="panel">
+<h3>💎 Pilih Nominal Top Up</h3>
+<div class="packages" id="packages"></div>
+</section>
+
+<section class="panel">
+<h3>💳 Pilih Metode Pembayaran</h3>
+<div class="methods">
+<button class="method active" onclick="selectMethod(this,'QRIS')">
+<span>▦</span><small>QRIS</small>
+</button>
+<button class="method" onclick="selectMethod(this,'DANA')">
+<span>💙</span><small>DANA</small>
+</button>
+<button class="method" onclick="selectMethod(this,'BANK')">
+<span>🏦</span><small>Bank</small>
+</button>
+</div>
+</section>
+
+<section class="panel">
+<h3>📋 Ringkasan Pesanan</h3>
+<div class="info"><span>Game</span><strong id="sGame">Mobile Legends</strong></div>
+<div class="info"><span>User ID</span><strong id="sId">-</strong></div>
+<div class="info"><span>Nominal</span><strong id="sNominal">-</strong></div>
+<div class="info"><span>Pembayaran</span><strong id="sMethod">QRIS</strong></div>
+<div class="total">
+<span>Total</span><strong id="sPrice">Rp0</strong>
+</div>
+<button class="pay" onclick="checkout()">LANJUTKAN PEMBAYARAN →</button>
+</section>
+
+</div>
+</main>
+
+<main id="checkoutPage">
+<div class="container">
+<section class="panel center checkout-panel">
+<h2>CHECKOUT PESANAN</h2>
+<p class="notice">Selesaikan pesanan C TOP Y kamu.</p>
+<div id="paymentContent"></div>
+<p class="notice">
+Pembayaran ini merupakan simulasi. QRIS, DANA,
+dan transfer bank belum terhubung dengan pembayaran asli.
+</p>
+<button class="pay" onclick="demoSuccess()">
+SIMULASIKAN PEMBAYARAN BERHASIL
+</button>
+<button class="pay back-button" onclick="back()">KEMBALI</button>
+</section>
+</div>
+</main>
+
+<footer>
+<h3>C TOP Y.</h3>
+<p>Premium Game Top Up Store</p>
+<p>© 2026 C TOP Y. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
